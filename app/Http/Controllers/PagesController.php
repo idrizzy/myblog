@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Category;
 
 use Illuminate\Http\Request;
 
@@ -37,8 +38,8 @@ class PagesController extends Controller
 
     public function blogs()
     {
-        
-        return view('blog');
+        $category = Category::all();
+        return view('blog',compact('category', $category));
     }
 
     public function contact()

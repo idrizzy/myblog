@@ -17,6 +17,7 @@
                             <li class="active">Post left sidebar</li>
                         </ul>
                         <h2>Posts</h2>
+                        <a href="addpost" class="btn btn-primary pull-right">Add Post</a>
                         </div>
                     </div>
                     </div>
@@ -174,13 +175,10 @@
                         <div class="widget">
 
                             <h5 class="widgetheading">Categories</h5>
-
                             <ul class="cat">
-                            <li><i class="icon-angle-right"></i> <a href="#">Web design</a><span> (20)</span></li>
-                            <li><i class="icon-angle-right"></i> <a href="#">Online business</a><span> (11)</span></li>
-                            <li><i class="icon-angle-right"></i> <a href="#">Marketing strategy</a><span> (9)</span></li>
-                            <li><i class="icon-angle-right"></i> <a href="#">Technology</a><span> (12)</span></li>
-                            <li><i class="icon-angle-right"></i> <a href="#">About finance</a><span> (18)</span></li>
+                            @foreach($category as $cat)
+                            <li><i class="icon-angle-right"></i> <a href="#">{{$cat->catname}}</a><span> (20)</span></li>
+                            @endforeach
                             </ul>
                         </div>
 

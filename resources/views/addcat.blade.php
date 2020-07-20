@@ -27,8 +27,8 @@
           <div class="span8">
             <h4></h4>
 
-            <div id="sendmessage">Your message has been sent. Thank you!</div>
-            <div id="errormessage"></div>
+            
+            @include('include.message')
             <form action="{{route('categories.store')}}" method="post" role="form" class="contactForm">
                 @csrf
                 <div class="row">

@@ -25,10 +25,10 @@
       <div class="container">
         <div class="row">
           <div class="span8">
-            <div id="sendmessage">Your message has been sent. Thank you!</div>
-            <div id="errormessage"></div>
-            <form action="./" method="post" role="form" class="contactForm">
-                @csrf
+            @include('include.message')
+            <form action="{{ route('categories.update', $category[0]->id) }}" method="post" role="form" class="contactForm">
+                    @method('PATCH') 
+                    @csrf
                 <input type="hidden" name="_method" value="PUT"> 
                 <div class="row">
                     <div class="form-group row">
